@@ -1,20 +1,36 @@
 {
   "name": "graphql-apollo-redis",
   "version": "0.0.1",
-  "description": "",
+  "description": "Aprendizado de Apollo com Redis para geração de cache",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "12.13.0",
+    "npm": "6.12.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rntvicente/graphql-apollo-redis.git"
   },
-  "keywords": [],
+  "keywords": [
+    "graphql",
+    "express",
+    "redis",
+    "apollo-server",
+    "apollo-server-express"
+  ],
   "author": "Renato Vicente <rntvicente@gmail.com> (https://www.linkedin.com/in/vicenterenato/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rntvicente/graphql-apollo-redis/issues"
   },
-  "homepage": "https://github.com/rntvicente/graphql-apollo-redis#readme"
+  "homepage": "https://github.com/rntvicente/graphql-apollo-redis#readme",
+  "dependencies": {
+    "apollo-server": "^2.10.1",
+    "apollo-server-express": "^2.10.1",
+    "express": "^4.17.1",
+    "graphql": "^14.6.0"
+  }
 }
