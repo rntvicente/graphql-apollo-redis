@@ -1,9 +1,9 @@
 type User {
-  id: ID!
+  id: Int!
   name: String!
   username: String!
   email: String!
-  address: Address
+  address: Address!
   phone: String!
   website: String
 }
@@ -22,7 +22,7 @@ input UserInput {
 }
 
 type Query {
-  getUserById(id: ID!): User
+  getUserById(id: Int!): User
 }
 
 type Mutation {

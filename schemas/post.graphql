@@ -1,18 +1,18 @@
 type Post {
-  id: ID!,
+  userId: Int!
+  id: Int!,
   title: String!
-  body: String
-  userId: ID!
+  body: String!
 }
 
 type Query {
-  getPosts: [Post]
+  getPosts: [Post!]
 }
 
 input PostInput {
   title: String!
   body: String
-  userId: ID!
+  userId: Int!
 }
 
 type Mutation {

@@ -1,13 +1,13 @@
 type Comment {
-  postId: ID!
-  id: ID!
+  postId: Int!
+  id: Int!
   name: String!
   email: String!
-  body: String
+  body: String!
 }
 
 input CommentInput {
-  postId: ID!
+  postId: Int!
   name: String!
   email: String!
   body: String

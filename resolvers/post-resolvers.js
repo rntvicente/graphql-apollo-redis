@@ -1,10 +1,13 @@
-const { getPosts } = require('../client/posts')
+const client = require('../client/posts')
 
 const resolvers = {
   Query: {
-    getPosts: async () => {
-      const posts = await getPosts();
-      return posts;
-    },
-  },
+    async getPosts(parent, args) {
+      const { body } = await client.getPosts();
+      console.log('POSTS ', body);
+      return body;
+    }
+  }
 };
+
+module.exports = resolvers;

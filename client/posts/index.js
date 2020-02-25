@@ -1,22 +1,21 @@
 const request = require('request');
 
-const getPosts = new Promise((resolve, reject) => {
+const getPosts = () => new Promise((resolve, reject) => {
   const options = {
-    uri: 'https://jsonplaceholder.typicode.com/posts',
-    method: 'GET'
+    url: 'https://jsonplaceholder.typicode.com/posts',
+    headers: { 'Content-Type': 'application/json' },
+    method: 'GET',
+    json: true
   };
 
-  request(options, (error, response, body) => {
-    if (error) {
-      console.error(`[ERRO] ${error}`);
-      return reject(error);
+  request(options, (err, response, body) => {
+    if (err) {
+      reject(err);
     }
-
-    if (response.statusCode !== 200) {
-      console.log(`Fetch "${resources}" returned ${response.statusCode}`);
-    }
-
-    return resolve(body);
+    resolve({
+      response,
+      body
+    });
   });
 });
 
