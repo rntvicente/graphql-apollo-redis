@@ -1,0 +1,18 @@
+type Comment {
+  postId: ID!
+  id: ID!
+  name: String!
+  email: String!
+  body: String
+}
+
+input CommentInput {
+  postId: ID!
+  name: String!
+  email: String!
+  body: String
+}
+
+type Mutation {
+  addComment(comment: CommentInput): Comment
+}

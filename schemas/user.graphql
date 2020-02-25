@@ -1,0 +1,30 @@
+type User {
+  id: ID!
+  name: String!
+  username: String!
+  email: String!
+  address: Address
+  phone: String!
+  website: String
+}
+
+type Address {
+  street: String!
+  suite: String!
+  city: String!
+  zipcode: String!
+}
+
+input UserInput {
+  name: String!,
+  username: String!
+  email: String!
+}
+
+type Query {
+  getUserById(id: ID!): User
+}
+
+type Mutation {
+  addUser(user: UserInput): User
+}
