@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/rntvicente/graphql-apollo-redis#readme",
   "dependencies": {
-    "apollo-server": "^2.10.1",
+    "apollo-server": "^2.14.2",
     "apollo-server-cache-redis": "^1.1.5",
     "apollo-server-express": "^2.10.1",
     "body-parser": "^1.19.0",
